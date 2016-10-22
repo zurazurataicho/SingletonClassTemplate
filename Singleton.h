@@ -9,22 +9,22 @@ template <typename T>
 class Singleton
 {
 private:
-  // Disable copy constructors and copy operators.
-	Singleton(Singleton&) = delete;
-	Singleton(Singleton&&) = delete;
-	Singleton operator=(Singleton&) = delete;
-	Singleton operator=(Singleton&&) = delete;
+    // Disable copy constructors and copy operators.
+    Singleton(Singleton&) = delete;
+    Singleton(Singleton&&) = delete;
+    Singleton operator=(Singleton&) = delete;
+    Singleton operator=(Singleton&&) = delete;
 
 protected:
-	Singleton() {}
-	virtual ~Singleton() {}
+    Singleton() {}
+    virtual ~Singleton() {}
 
 public:
-	static T& getInstance()
-	{
-		static T* instance = new T();
-		return *instance;
-	}
+    static T& getInstance()
+    {
+        static T* instance = new T();
+        return *instance;
+    }
 };
 
 #endif /* __SINGLETON_H__ */

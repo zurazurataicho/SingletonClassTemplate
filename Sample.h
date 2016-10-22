@@ -8,17 +8,17 @@
 class Sample final : public Singleton<Sample>
 {
 private:
-  // getInstance() needs to access to the constructor on this class.
-  // This allows the Singleton base class to access it as a friend.
-	friend class Singleton<Sample>;
+    // getInstance() needs to access to the constructor on this class.
+    // This allows the Singleton base class to access it as a friend.
+    friend class Singleton<Sample>;
 
-	Sample();
-	~Sample() override;
+    Sample();
+    ~Sample() override;
 
-	int _a;
+    int _a;
 
 public:
-	void set(int a);
-	int get() const;
+    void set(int a);
+    int get() const;
 };
 #endif /* __SAMPLE_H__ */
